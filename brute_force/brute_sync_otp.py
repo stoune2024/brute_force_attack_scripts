@@ -4,8 +4,8 @@ import requests
 def send_request(session, otp):
     url = "http://localhost:1337/admin/otp.php"
     data = {"OTP": otp}
-    cookies = {"PHPSESSID": "1f5770d369a8e0e5b307eddfa9198a2b"}
-    headers = {"Cookie": "PHPSESSID=1f5770d369a8e0e5b307eddfa9198a2b"}
+    cookies = {"PHPSESSID": "1d056b68445f587985ab1462c8200cc7"}
+    headers = {"Cookie": "PHPSESSID=1d056b68445f587985ab1462c8200cc7"}
 
     response = session.post(url, data=data, cookies=cookies, headers=headers)
 

@@ -4,8 +4,8 @@ import requests
 def send_request(session, password):
     url = "http://localhost:1337/admin/"
     data = {"username": "admin", "password": password}
-    cookies = {"PHPSESSID": "ffa8580d8ca14309f505e6e68a57cd2e"}
-    headers = {"Cookie": "PHPSESSID=ffa8580d8ca14309f505e6e68a57cd2e"}
+    cookies = {"PHPSESSID": "1d056b68445f587985ab1462c8200cc7"}
+    headers = {"Cookie": "PHPSESSID=1d056b68445f587985ab1462c8200cc7"}
 
     response = session.post(url, data=data, cookies=cookies, headers=headers)
 
@@ -18,7 +18,7 @@ def read_passwords_from_file(path: str) -> list[str]:
 
 
 def main():
-    passwords = read_passwords_from_file("realyBest.txt")
+    passwords = read_passwords_from_file("../realyBest.txt")
 
     # одна сессия на все запросы (аналог ClientSession)
     with requests.Session() as session:
